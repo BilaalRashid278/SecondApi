@@ -1,0 +1,41 @@
+To Get Post Put Patch Delete Request in Api Use thi Url's
+
+// This is Get method to call request
+Get All Products! Write this url 
+http://localhost:5000/api/v1/
+
+
+
+// This is Get method to call request
+Get Categoried Products! Write this url 
+http://localhost:5000/api/v1/searchCategory?category=categoryName
+
+
+// This is Get method to call request
+Get Only One Product! Write this url 
+http://localhost:5000/api/v1/Productid
+
+
+// This is Post method to call request
+Create New Product! Write this url  - Before the creating products visit the products.json file
+http://localhost:5000/api/v1/new
+
+
+
+// This is Patch method to call request
+Update only product one field! Write this url 
+http://localhost:5000/api/v1/updateone/id  
+
+
+
+// This is Put method to call request
+updateFullProduct! Write this url 
+http://localhost:5000/api/v1/update/id 
+
+
+
+
+// This is Delete method to call request
+DeleteProduct! Write this url 
+http://localhost:5000/api/v1/delete/id
+

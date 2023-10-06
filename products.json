@@ -1,0 +1,26 @@
+{
+    "success": true,
+    "message": "All Products is here",
+    "products": [
+        {
+            "_id": "651fdae85db0169bca1e55b7",
+            "name": "Airpods Pro 2",
+            "description": "Wireless airpods 2 is here",
+            "price": "110.00",
+            "currency": "USD",
+            "category": "mobileaccessoreis",
+            "image_url": "https://example.jpg",
+            "__v": 0
+        },
+        {
+            "_id": "651fdedab1d3992728c95e57",
+            "name": "Honda Civic",
+            "description": "This is Vaccume cleaner is best & beautifull",
+            "price": "100.00",
+            "currency": "USD",
+            "category": "electronics",
+            "image_url": "https://example.jpg",
+            "__v": 0
+        }
+    ]
+}

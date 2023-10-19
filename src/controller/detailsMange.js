@@ -111,4 +111,6 @@ const SignUpUser = async (req,res) => {
     }
 }
 
+
+
 module.exports = { getAllDetails, createProduct, UpdateOneProduct, UpdateProduct, DeleteProduct, getCategoriedDetails, getOneProduct, SignUpUser };

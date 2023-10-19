@@ -32,6 +32,12 @@ const AuthModel = mongoose.model('UserAuth',{
         type : Boolean,
         required : true,
     },
+    userName : {
+        type : String,
+        required : true,
+        unique : true,
+        lowercase : true,
+    }
 });
 
 module.exports = AuthModel

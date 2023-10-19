@@ -1,4 +1,5 @@
 const { ProductModel } = require('../models/Product.js');
+const AuthModel = require('../models/Auth.js');
 
 
 const getAllDetails = async (req, res) => {
@@ -7,7 +8,7 @@ const getAllDetails = async (req, res) => {
         res.send({
             success: true,
             message: "All Products is here",
-            products
+            products,
         });
     } catch (error) {
         res.send({
@@ -25,7 +26,7 @@ const getOneProduct = async (req, res) => {
             product
         });
     } catch (error) {
-        res.send({
+        res.status(400).send({
             success: false,
             message: "Product not found",
         })
@@ -93,5 +94,21 @@ const DeleteProduct = async (req, res) => {
         res.send(error);
     }
 };
+const SignUpUser = async (req,res) => {
+    try {
+        const UserAuth = await AuthModel.insertMany([req.body]);
+        res.send({
+            success: true,
+            message : 'Your account has been created successfully',
+            UserAuth
+        })
+    } catch (error) {
+        res.send({
+            success: false,
+            message : 'account not created',
+            error
+        })
+    }
+}
 
-module.exports = { getAllDetails, createProduct, UpdateOneProduct, UpdateProduct, DeleteProduct, getCategoriedDetails, getOneProduct };
+module.exports = { getAllDetails, createProduct, UpdateOneProduct, UpdateProduct, DeleteProduct, getCategoriedDetails, getOneProduct, SignUpUser };

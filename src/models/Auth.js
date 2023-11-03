@@ -18,26 +18,13 @@ const AuthModel = mongoose.model('UserAuth',{
         minLength : 8,
         required : true
     },
-    phoneNumber : {
-        type : String,
-        minLength : 10,
-        maxLength : 11,
-        required : true
-    },
     date : {
         type : Date,
         default : new Date(),
     },
     isSignUp : {
         type : Boolean,
-        required : true,
     },
-    userName : {
-        type : String,
-        required : true,
-        unique : true,
-        lowercase : true,
-    }
 });
 
 module.exports = AuthModel

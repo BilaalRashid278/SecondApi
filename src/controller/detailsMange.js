@@ -1,10 +1,17 @@
 const { ProductModel } = require('../models/Product.js');
 const AuthModel = require('../models/Auth.js');
 
+let page = 5
+const limit = 5;
+const skip = (page -1) * limit;
+console.log(skip);
 
 const getAllDetails = async (req, res) => {
+    const page = req.query.page || 1;
+    const limit = req.query.limit || 10
+    const skip = (page -1) * limit
     try {
-        const products = await ProductModel.find();
+        const products = await ProductModel.find().skip(skip).limit(limit);
         res.send({
             success: true,
             message: "All Products is here",
@@ -34,7 +41,10 @@ const getOneProduct = async (req, res) => {
 };
 const getCategoriedDetails = async (req, res) => {
     const category = req.query.category
-    const products = await ProductModel.find({ category: category });
+    const page = req.query.page || 1;
+    const limit = req.query.limit || 10
+    const skip = (page -1) * limit
+    const products = await ProductModel.find({ category: category }).skip(skip).limit(limit);
     res.send({
         success: true,
         message: "All Categoried Products is here",
